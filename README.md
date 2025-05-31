@@ -1,3 +1,2 @@
 # Capstone-PublicAPI
-
-# Project from Udemy course
+Project from Udemy course
