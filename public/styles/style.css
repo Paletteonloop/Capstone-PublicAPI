@@ -1,0 +1,115 @@
+/* Add this if you want specific styling for single jokes,
+   though the existing .joke-text should cover it. */
+#joke-single {
+  font-size: 1.1em; /* Matches .joke-text */
+  line-height: 1.6; /* Matches .joke-text */
+  color: #222; /* Matches .joke-text */
+  /* font-weight: bold; /* Optionally make single jokes bold */
+}
+
+/* Style for the error message, already partially done inline in HTML */
+#error-message {
+  font-size: 0.9em;
+  min-height: 1.2em; /* Reserve space to prevent layout shift */
+}
+
+/* (Rest of your existing CSS from the previous step remains the same) */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #e0f7fa; /* Using a very light shade for overall background, can also use #00FFDE if not too overpowering */
+  /* Or, if you want one of the palette colors directly: background-color: #00FFDE; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: #333; /* Default text color, will override for specific elements */
+}
+
+.container {
+  background-color: #ffffff; /* White container stands out on a colored background */
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  border-top: 5px solid #4300ff; /* Accent border with the deep blue/purple */
+}
+
+h1 {
+  color: #4300ff; /* Deep Blue/Purple for the main heading */
+  margin-bottom: 25px;
+  font-size: 1.8em;
+}
+
+.joke-area {
+  background-color: #f0ffff; /* Very light cyan/azure for the joke area background */
+  border: 1px solid #00caff; /* Cyan border */
+  border-radius: 8px;
+  padding: 20px;
+  min-height: 100px; /* Adjusted min-height */
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.joke-text {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin: 5px 0;
+  color: #222; /* Darker text for better readability on light joke area */
+}
+
+#joke-punchline {
+  font-weight: bold;
+  color: #0065f8; /* Bright Blue for the punchline */
+  margin-top: 10px;
+}
+
+#get-joke-btn {
+  background-color: #0065f8; /* Bright Blue for the button */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#get-joke-btn:hover {
+  background-color: #4300ff; /* Deep Blue/Purple on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(67, 0, 255, 0.3); /* Shadow related to the hover color */
+}
+
+#get-joke-btn:active {
+  background-color: #004aaa; /* A slightly darker shade of the bright blue for active state */
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 25px;
+    margin: 20px; /* Add some margin on smaller screens */
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .joke-text {
+    font-size: 1em;
+  }
+
+  #get-joke-btn {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+}
